@@ -4,6 +4,8 @@ import Link from "next/link"
 import MobileNav from "./MobileNav"
 import Nav from "./Nav"
 
+const test = ""
+
 const Header = () => {
   return (
     <header className="bg-background_light fixed left-0 right-0 h-[70px] w-full">
