@@ -11,7 +11,7 @@ const Header = () => {
         <Link href="/">
           <div className="flex items-center gap-1">
             <Image src="/img/logo/logo.png" alt="Logo" width={55} height={55} />
-            <h1 className="text-[1.5rem] font-extrabold text-violet-900 lg:text-[1.75rem]">
+            <h1 className="text-[1.5rem] font-extrabold tracking-tight text-violet-900 lg:text-[1.75rem]">
               CLUMSY<span className="text-violet-500">CAT</span>
             </h1>
           </div>
