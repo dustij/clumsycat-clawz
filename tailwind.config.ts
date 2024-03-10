@@ -18,7 +18,7 @@ const config: Config = {
       xl: "1400px",
     },
     fontFamily: {
-      oswald: "var(--font-oswald)",
+      oswald: "var(--font-paytone-one)",
       roboto: "var(--font-roboto)",
     },
     backgroundImage: {

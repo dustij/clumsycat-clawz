@@ -5,11 +5,11 @@ import { Link } from "react-scroll"
 import { cn } from "@/lib/utils"
 
 const links = [
-  { name: "home", target: "home", offset: -200 },
-  { name: "about", target: "about", offset: -200 },
-  { name: "how to buy", target: "how-to-buy", offset: -200 },
-  { name: "tokenomics", target: "tokenomics", offset: -200 },
-  { name: "roadmap", target: "roadmap", offset: -200 },
+  { name: "home", target: "home", offset: -100 },
+  { name: "about", target: "about", offset: -90 },
+  { name: "how to buy", target: "how-to-buy", offset: -90 },
+  { name: "tokenomics", target: "tokenomics", offset: -90 },
+  { name: "roadmap", target: "roadmap", offset: -90 },
 ]
 
 const Nav = ({ containerStyles }: { containerStyles: string }) => {
@@ -24,6 +24,7 @@ const Nav = ({ containerStyles }: { containerStyles: string }) => {
             smooth
             spy
             activeClass="active"
+            className="hover:text-on_background/90 cursor-pointer transition-all duration-300"
           >
             {link.name}
           </Link>

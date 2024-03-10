@@ -1,16 +1,16 @@
 import "./globals.css"
 
 import type { Metadata } from "next"
-import { Oswald, Roboto } from "next/font/google"
+import { Paytone_One, Roboto } from "next/font/google"
 
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import { cn } from "@/lib/utils"
 
-const oswald = Oswald({
+const paytone_one = Paytone_One({
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700"],
-  variable: "--font-oswald",
+  weight: ["400"],
+  variable: "--font-paytone-one",
 })
 
 const roboto = Roboto({
@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en" className="bg-gray-200">
       <body
         className={cn(
-          oswald.variable,
+          paytone_one.variable,
           roboto.variable,
           "bg-background mx-auto w-full max-w-[1920px]",
         )}
