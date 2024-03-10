@@ -24,7 +24,7 @@ const Nav = ({ containerStyles }: { containerStyles: string }) => {
             smooth
             spy
             activeClass="active"
-            className="hover:text-on_background/90 cursor-pointer transition-all duration-300"
+            className="hover:text-primary_light/90 cursor-pointer transition-all duration-300"
           >
             {link.name}
           </Link>

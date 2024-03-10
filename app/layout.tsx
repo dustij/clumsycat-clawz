@@ -35,7 +35,7 @@ export default function RootLayout({
         className={cn(
           paytone_one.variable,
           roboto.variable,
-          "bg-background mx-auto w-full max-w-[1920px]",
+          "bg-background_light mx-auto w-full max-w-[1920px]",
         )}
       >
         <Header />

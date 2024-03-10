@@ -6,14 +6,14 @@ import Nav from "./Nav"
 
 const Header = () => {
   return (
-    <header className="bg-background fixed left-0 right-0 h-[90px] w-full">
-      <div className="container mx-auto">
+    <header className="bg-background_light fixed left-0 right-0 h-[70px] w-full">
+      <div className="container mx-auto flex h-full items-center justify-between">
         <Link href="/">
           <div className="flex items-center gap-1">
-            <Image src="/img/logo/logo.png" alt="Logo" width={50} height={50} />
-            <h2 className="hidden text-[1.75rem] font-extrabold leading-[30px] text-violet-900 lg:block">
+            <Image src="/img/logo/logo.png" alt="Logo" width={55} height={55} />
+            <h1 className="text-[1.5rem] font-extrabold text-violet-900 lg:text-[1.75rem]">
               CLUMSY<span className="text-violet-500">CAT</span>
-            </h2>
+            </h1>
           </div>
         </Link>
         <MobileNav containerStyles="xl:hidden" />
