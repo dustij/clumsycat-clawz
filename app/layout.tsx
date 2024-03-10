@@ -5,6 +5,7 @@ import { Oswald, Roboto } from "next/font/google"
 
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
+import { cn } from "@/lib/utils"
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -29,8 +30,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${oswald.variable} ${roboto.variable}`}>
+    <html lang="en" className="bg-gray-200">
+      <body
+        className={cn(
+          oswald.variable,
+          roboto.variable,
+          "bg-background mx-auto w-full max-w-[1920px]",
+        )}
+      >
         <Header />
         {children}
         <Footer />
