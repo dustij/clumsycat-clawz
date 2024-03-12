@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import toast from "react-hot-toast"
 
 import { cn } from "@/lib/utils"
 
@@ -83,7 +84,11 @@ const Header = () => {
         {/* hide/show menu button */}
         <div>
           <div>
-            <Button variant="violet_gradient" size="lg_rounded">
+            <Button
+              variant="violet_gradient"
+              size="lg_rounded"
+              onClick={() => toast.error("This feature is coming soon")}
+            >
               Connect Wallet
             </Button>
           </div>
