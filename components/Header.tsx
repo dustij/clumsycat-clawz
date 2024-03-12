@@ -8,6 +8,7 @@ import toast from "react-hot-toast"
 
 import { cn } from "@/lib/utils"
 
+import ConnectWallet from "./ConnectWallet"
 import MobileNav from "./MobileNav"
 import Nav from "./Nav"
 import { Button } from "./ui/button"
@@ -82,15 +83,9 @@ const Header = () => {
         />
         <Nav containerStyles="bg-background flex gap-4 hidden xl:flex" />
         {/* hide/show menu button */}
-        <div>
-          <div>
-            <Button
-              variant="violet_gradient"
-              size="lg_rounded"
-              onClick={() => toast.error("This feature is coming soon")}
-            >
-              Connect Wallet
-            </Button>
+        <div className="flex items-center gap-4">
+          <div className="hidden items-center gap-4 xl:flex">
+            <ConnectWallet />
           </div>
           <button
             className="flex h-8 w-10 flex-col items-center justify-between xl:hidden"

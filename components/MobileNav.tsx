@@ -5,6 +5,8 @@ import { Link } from "react-scroll"
 
 import { cn } from "@/lib/utils"
 
+import ConnectWallet from "./ConnectWallet"
+
 const links = [
   { name: "home", target: "home", offset: -100 },
   { name: "about", target: "about", offset: -90 },
@@ -32,6 +34,9 @@ const MobileNav = ({ containerStyles }: { containerStyles: string }) => {
           </Link>
         )
       })}
+      <div className="flex w-full items-center justify-center">
+        <ConnectWallet />
+      </div>
     </nav>
   )
 }
