@@ -2,6 +2,7 @@ import "./globals.css"
 
 import type { Metadata } from "next"
 import { Paytone_One, Roboto } from "next/font/google"
+import { Toaster } from "react-hot-toast"
 
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
@@ -35,12 +36,13 @@ export default function RootLayout({
         className={cn(
           paytone_one.variable,
           roboto.variable,
-          "bg-background_light mx-auto w-full max-w-[1920px]",
+          "mx-auto w-full max-w-[1920px] bg-background_light",
         )}
       >
         <Header />
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   )

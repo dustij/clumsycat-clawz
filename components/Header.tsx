@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils"
 
 import MobileNav from "./MobileNav"
 import Nav from "./Nav"
+import { Button } from "./ui/button"
 
 const topVariants = {
   closed: {
@@ -81,6 +82,11 @@ const Header = () => {
         <Nav containerStyles="bg-background flex gap-4 hidden xl:flex" />
         {/* hide/show menu button */}
         <div>
+          <div>
+            <Button variant="violet_gradient" size="lg_rounded">
+              Connect Wallet
+            </Button>
+          </div>
           <button
             className="flex h-8 w-10 flex-col items-center justify-between xl:hidden"
             onClick={() => setOpenNav(!openNav)}

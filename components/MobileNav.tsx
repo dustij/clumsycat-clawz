@@ -1,5 +1,6 @@
 "use client"
 
+import { useMediaQuery } from "react-responsive"
 import { Link } from "react-scroll"
 
 import { cn } from "@/lib/utils"
@@ -13,6 +14,7 @@ const links = [
 ]
 
 const MobileNav = ({ containerStyles }: { containerStyles: string }) => {
+  const isMobile = useMediaQuery({ query: "(max-width: 640px)" })
   return (
     <nav className={cn(containerStyles)}>
       {links.map((link, index) => {
@@ -23,7 +25,7 @@ const MobileNav = ({ containerStyles }: { containerStyles: string }) => {
             to={link.target}
             smooth
             spy
-            activeClass="active"
+            activeClass={cn(isMobile && "active")}
             className="cursor-pointer transition-all duration-300 hover:text-primary_light/90"
           >
             {link.name}

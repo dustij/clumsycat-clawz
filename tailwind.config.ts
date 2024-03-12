@@ -21,9 +21,6 @@ const config: Config = {
       paytoneOne: "var(__font_paytone_one)",
       roboto: "var(__font_roboto)",
     },
-    backgroundImage: {
-      hero: "url('/img/hero/fuffy_hero_wide.jpg')",
-    },
     extend: {
       colors: {
         /* primary */
