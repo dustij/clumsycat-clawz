@@ -1,5 +1,6 @@
 "use client"
 
+import { Dispatch, SetStateAction } from "react"
 import { useMediaQuery } from "react-responsive"
 import { Link } from "react-scroll"
 
@@ -15,20 +16,28 @@ const links = [
   { name: "roadmap", target: "roadmap", offset: -90 },
 ]
 
-const MobileNav = ({ containerStyles }: { containerStyles: string }) => {
+const MobileNav = ({
+  containerStyles,
+  navState,
+}: {
+  containerStyles: string
+  navState: [boolean, Dispatch<SetStateAction<boolean>>]
+}) => {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" })
+  const [openNav, setOpenNav] = navState
   return (
     <nav className={cn(containerStyles)}>
       {links.map((link, index) => {
         return (
           <Link
+            onClick={() => setOpenNav(false)}
             key={index}
             offset={link.offset}
             to={link.target}
             smooth
             spy
             activeClass={cn(isMobile && "active")}
-            className="cursor-pointer transition-all duration-300 hover:text-primary_light/90"
+            className="cursor-pointer transition-all hover:text-primary_light/90"
           >
             {link.name}
           </Link>

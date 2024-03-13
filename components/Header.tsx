@@ -74,6 +74,7 @@ const Header = () => {
           </div>
         </Link>
         <MobileNav
+          navState={[openNav, setOpenNav]}
           containerStyles={cn(
             "xl:hidden transition-all flex-col text-center gap-8 flex fixed bg-background_light w-full left-0 top-[70px] text-base uppercase font-medium",
             openNav
@@ -81,7 +82,7 @@ const Header = () => {
               : "max-h-0 pt-0 pb-0 overflow-hidden border-surface_variant_light/0",
           )}
         />
-        <Nav containerStyles="bg-background flex gap-4 hidden xl:flex" />
+        <Nav containerStyles="bg-background uppercase font-medium flex gap-4 hidden xl:flex" />
         {/* hide/show menu button */}
         <div className="flex items-center gap-4">
           <div className="hidden items-center gap-4 xl:flex">
