@@ -22,6 +22,17 @@ const config: Config = {
       roboto: "var(--font-roboto)",
     },
     extend: {
+      backgroundImage: {
+        hero: "url(/img/hero/fluffy-hero-wide.png)",
+      },
+      backgroundSize: {
+        auto: "auto",
+        cover: "cover",
+        contain: "contain",
+        lg: "1800px",
+        md: "1000px",
+        sm: "600px",
+      },
       colors: {
         /* primary */
         primary0: "#000000",

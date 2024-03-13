@@ -24,7 +24,7 @@ const MobileNav = ({
   navState: [boolean, Dispatch<SetStateAction<boolean>>]
 }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" })
-  const [openNav, setOpenNav] = navState
+  const [_, setOpenNav] = navState
   return (
     <nav className={cn(containerStyles)}>
       {links.map((link, index) => {
