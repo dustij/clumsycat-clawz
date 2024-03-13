@@ -9,11 +9,11 @@ import { cn } from "@/lib/utils"
 import ConnectWallet from "./ConnectWallet"
 
 const links = [
-  { name: "home", target: "home", offset: -100 },
-  { name: "about", target: "about", offset: -90 },
-  { name: "how to buy", target: "how-to-buy", offset: -90 },
-  { name: "tokenomics", target: "tokenomics", offset: -90 },
-  { name: "roadmap", target: "roadmap", offset: -90 },
+  { name: "Home", target: "home", offset: -100 },
+  { name: "About", target: "about", offset: -90 },
+  { name: "How To Buy", target: "how-to-buy", offset: -90 },
+  { name: "Tokenomics", target: "tokenomics", offset: -90 },
+  { name: "Roadmap", target: "roadmap", offset: -90 },
 ]
 
 const MobileNav = ({
@@ -37,14 +37,14 @@ const MobileNav = ({
             smooth
             spy
             activeClass={cn(isMobile && "active")}
-            className="cursor-pointer transition-all hover:text-primary_light/90"
+            className="hover:text-primary_light/90 cursor-pointer transition-all"
           >
             {link.name}
           </Link>
         )
       })}
       <div className="flex w-full items-center justify-center">
-        <ConnectWallet />
+        <ConnectWallet className="text-lg" />
       </div>
     </nav>
   )

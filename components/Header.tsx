@@ -60,7 +60,7 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 z-50 h-[70px] w-full bg-background_light",
+        "bg-background_light fixed top-0 z-50 h-[70px] w-full",
         headerActive && "shadow-md",
       )}
     >
@@ -76,17 +76,17 @@ const Header = () => {
         <MobileNav
           navState={[openNav, setOpenNav]}
           containerStyles={cn(
-            "xl:hidden transition-all flex-col text-center gap-8 flex fixed bg-background_light w-full left-0 top-[70px] text-base uppercase font-medium",
+            "xl:hidden transition-all flex-col text-center gap-8 flex fixed bg-background_light w-full left-0 top-[70px] text-lg font-medium",
             openNav
               ? "max-h-max pt-8 pb-10 border-t shadow-md border-surface_variant_light"
               : "max-h-0 pt-0 pb-0 overflow-hidden border-surface_variant_light/0",
           )}
         />
-        <Nav containerStyles="bg-background uppercase font-medium flex gap-4 hidden xl:flex" />
+        <Nav containerStyles="bg-background font-medium text-lg flex gap-4 hidden xl:flex" />
         {/* hide/show menu button */}
         <div className="flex items-center gap-4">
           <div className="hidden items-center gap-4 xl:flex">
-            <ConnectWallet />
+            <ConnectWallet className="text-lg" />
           </div>
           <button
             className="flex h-8 w-10 flex-col items-center justify-between xl:hidden"
@@ -95,17 +95,17 @@ const Header = () => {
             <motion.div
               variants={topVariants}
               animate={openNav ? "opened" : "closed"}
-              className="h-1 w-10 origin-left rounded-full bg-primary_light"
+              className="bg-primary_light h-1 w-10 origin-left rounded-full"
             />
             <motion.div
               variants={centerVariants}
               animate={openNav ? "opened" : "closed"}
-              className="h-1 w-10 origin-center rounded-full bg-primary_light"
+              className="bg-primary_light h-1 w-10 origin-center rounded-full"
             />
             <motion.div
               variants={bottomVariants}
               animate={openNav ? "opened" : "closed"}
-              className="h-1 w-10 origin-left rounded-full bg-primary_light"
+              className="bg-primary_light h-1 w-10 origin-left rounded-full"
             />
           </button>
         </div>
