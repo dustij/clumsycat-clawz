@@ -60,7 +60,7 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "bg-background_light fixed top-0 z-50 h-[70px] w-full",
+        "fixed top-0 z-50 h-[70px] w-full bg-background_light",
         headerActive && "shadow-md",
       )}
     >
@@ -68,7 +68,7 @@ const Header = () => {
         <Link href="/">
           <div className="flex items-center gap-1">
             <Image src="/img/logo/logo.png" alt="Logo" width={55} height={55} />
-            <h1 className="text-[1.5rem] font-extrabold tracking-tight text-violet-900 lg:text-[1.75rem]">
+            <h1 className="text-[1.5rem] font-extrabold text-violet-900 lg:text-[1.75rem]">
               CLUMSY<span className="text-violet-500">CAT</span>
             </h1>
           </div>
@@ -95,17 +95,17 @@ const Header = () => {
             <motion.div
               variants={topVariants}
               animate={openNav ? "opened" : "closed"}
-              className="bg-primary_light h-1 w-10 origin-left rounded-full"
+              className="h-1 w-10 origin-left rounded-full bg-primary_light"
             />
             <motion.div
               variants={centerVariants}
               animate={openNav ? "opened" : "closed"}
-              className="bg-primary_light h-1 w-10 origin-center rounded-full"
+              className="h-1 w-10 origin-center rounded-full bg-primary_light"
             />
             <motion.div
               variants={bottomVariants}
               animate={openNav ? "opened" : "closed"}
-              className="bg-primary_light h-1 w-10 origin-left rounded-full"
+              className="h-1 w-10 origin-left rounded-full bg-primary_light"
             />
           </button>
         </div>

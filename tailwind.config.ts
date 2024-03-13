@@ -18,8 +18,8 @@ const config: Config = {
       xl: "1400px",
     },
     fontFamily: {
-      paytoneOne: "var(__font_paytone_one)",
-      roboto: "var(__font_roboto)",
+      paytoneOne: "var(--font-paytone-one)",
+      roboto: "var(--font-roboto)",
     },
     extend: {
       colors: {
