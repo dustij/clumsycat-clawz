@@ -78,7 +78,7 @@ const Header = () => {
           containerStyles={cn(
             "xl:hidden transition-all flex-col text-center gap-8 flex fixed bg-background_light w-full left-0 top-[70px] text-base uppercase font-medium",
             openNav
-              ? "max-h-max pt-8 pb-10 border-t border-surface_variant_light"
+              ? "max-h-max pt-8 pb-10 border-t shadow-md border-surface_variant_light"
               : "max-h-0 pt-0 pb-0 overflow-hidden border-surface_variant_light/0",
           )}
         />
