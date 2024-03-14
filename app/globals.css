@@ -41,6 +41,6 @@
   }
 
   .spacer {
-    @apply aspect-[960/150] w-full bg-cover bg-center bg-no-repeat;
+    @apply aspect-[960/150] h-full w-full bg-cover bg-center bg-no-repeat;
   }
 }
