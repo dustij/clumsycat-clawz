@@ -22,7 +22,7 @@ const Hero = () => {
         viewport={{ once: true }}
       >
         <div className="container mx-auto h-full">
-          <div className="flex h-full flex-col justify-between pt-12 sm:pt-48 md:flex-row">
+          <div className="flex h-full flex-col justify-between pt-12 md:flex-row md:pt-48">
             <div className="flex h-full flex-col">
               <div className="mb-8">
                 <motion.h1
