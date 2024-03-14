@@ -10,6 +10,7 @@ export default function Home() {
       <Hero />
       <div className="spacer bg-aboutDivider" />
       <About />
+      <div className="spacer bg-howToDivider" />
       <HowToBuy />
       <Tokenomics />
       <Roadmap />

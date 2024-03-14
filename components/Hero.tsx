@@ -6,43 +6,9 @@ import Link from "next/link"
 import { FaTelegramPlane } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
 
+import { buttonItem, staggerItem, staggerParentContainer } from "@/lib/motion"
+
 import { Button } from "./ui/button"
-
-const container = {
-  hidden: { opacity: 0, x: -50 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      delayChildren: 0.5,
-      staggerChildren: 0.25,
-      duration: 1,
-      type: "spring",
-      bounce: 0.5,
-    },
-  },
-}
-
-const item = {
-  hidden: { opacity: 0, x: -50 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      delayChildren: 0.25,
-      staggerChildren: 0.075,
-      duration: 0.75,
-      type: "spring",
-      bounce: 0.5,
-    },
-  },
-}
-
-const buttonItem = {
-  hidden: { opacity: 0, y: 100 },
-  show: { opacity: 1, y: 0 },
-  transition: { type: "spring", bounce: 0.5 },
-}
 
 const Hero = () => {
   return (
@@ -50,17 +16,19 @@ const Hero = () => {
       <motion.section
         id="home"
         className="mt-[30px] min-h-[calc(100vh-70px)] bg-none bg-center bg-no-repeat sm:mt-[70px] md:bg-hero md:bg-md lg:h-[912px] lg:bg-lg"
-        variants={container}
+        variants={staggerParentContainer}
         initial="hidden"
-        animate="show"
         whileInView="show"
         viewport={{ once: true }}
       >
         <div className="container mx-auto h-full">
           <div className="flex h-full flex-col justify-between pt-12 sm:flex-row sm:pt-48">
-            <div className="h-ful flex flex-col">
+            <div className="flex h-full flex-col">
               <div className="mb-8">
-                <motion.h1 className="h1 text-violet-900" variants={item}>
+                <motion.h1
+                  className="h1 text-violet-900"
+                  variants={staggerItem}
+                >
                   CLUMSY
                   <span className="h1 hidden text-violet-500 sm:inline-block">
                     CAT
@@ -68,7 +36,7 @@ const Hero = () => {
                 </motion.h1>
                 <motion.h1
                   className="h1 text-violet-500 sm:hidden"
-                  variants={item}
+                  variants={staggerItem}
                 >
                   CAT
                 </motion.h1>
@@ -77,13 +45,13 @@ const Hero = () => {
               <div className="flex flex-col gap-8 md:w-[50%] lg:pl-2">
                 <motion.p
                   className=" md:h5 lg:h4 text-lg text-violet-900"
-                  variants={item}
+                  variants={staggerItem}
                 >
                   Embrace the whimsy of innovation with ClumsyCat Token—where
                   Fluffy&apos;s fumbles fuel your fortune
                 </motion.p>
                 {/* Buttons */}
-                <motion.div className="flex gap-4" variants={item}>
+                <motion.div className="flex gap-4" variants={staggerItem}>
                   <motion.div variants={buttonItem}>
                     <Link href="#" rel="noopener noreferrer" target="_blank">
                       <Button

@@ -10,10 +10,10 @@ import ConnectWallet from "./ConnectWallet"
 
 const links = [
   { name: "Home", target: "home", offset: -100 },
-  { name: "About", target: "about", offset: -90 },
-  { name: "How To Buy", target: "how-to-buy", offset: -90 },
-  { name: "Tokenomics", target: "tokenomics", offset: -90 },
-  { name: "Roadmap", target: "roadmap", offset: -90 },
+  { name: "About", target: "about", offset: -70 },
+  { name: "How To Buy", target: "how-to-buy", offset: -70 },
+  { name: "Tokenomics", target: "tokenomics", offset: -70 },
+  { name: "Roadmap", target: "roadmap", offset: -70 },
 ]
 
 const MobileNav = ({
@@ -37,7 +37,7 @@ const MobileNav = ({
             smooth
             spy
             activeClass={cn(isMobile && "active")}
-            className="hover:text-primary_light/90 cursor-pointer transition-all"
+            className="cursor-pointer transition-all hover:text-primary_light/90"
           >
             {link.name}
           </Link>

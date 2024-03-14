@@ -25,6 +25,7 @@ const config: Config = {
       backgroundImage: {
         hero: "url(/img/hero/fluffy-hero-wide.png)",
         aboutDivider: "url(/svg/dividers/about-divider.svg)",
+        howToDivider: "url(/svg/dividers/how-to-divider.svg)",
       },
       backgroundSize: {
         auto: "auto",
