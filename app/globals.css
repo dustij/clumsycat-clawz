@@ -17,7 +17,7 @@
   }
 
   .h1 {
-    @apply text-on_surface_light text-7xl tracking-[-1px] lg:text-[128px];
+    @apply text-7xl tracking-[-1px] text-on_surface_light lg:text-[128px];
   }
 
   .h2 {
@@ -38,5 +38,9 @@
 
   .active {
     @apply text-primary_light;
+  }
+
+  .spacer {
+    @apply aspect-[960/150] w-full bg-cover bg-center bg-no-repeat;
   }
 }

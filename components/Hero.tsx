@@ -46,17 +46,15 @@ const buttonItem = {
 
 const Hero = () => {
   return (
-    <motion.div
-      variants={container}
-      initial="hidden"
-      animate="show"
-      whileInView="show"
-      viewport={{ once: true }}
-      className="h-full w-full bg-gradient-to-b from-transparent via-violet-100 to-violet-300"
-    >
-      <section
+    <div className="h-full w-full bg-gradient-to-b from-transparent via-violet-100 to-violet-300">
+      <motion.section
         id="home"
         className="mt-[30px] min-h-[calc(100vh-70px)] bg-none bg-center bg-no-repeat sm:mt-[70px] md:bg-hero md:bg-md lg:h-[912px] lg:bg-lg"
+        variants={container}
+        initial="hidden"
+        animate="show"
+        whileInView="show"
+        viewport={{ once: true }}
       >
         <div className="container mx-auto h-full">
           <div className="flex h-full flex-col justify-between pt-12 sm:flex-row sm:pt-48">
@@ -142,8 +140,8 @@ const Hero = () => {
             />
           </div>
         </div>
-      </section>
-    </motion.div>
+      </motion.section>
+    </div>
   )
 }
 

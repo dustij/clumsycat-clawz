@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <div className="spacer bg-aboutDivider" />
       <About />
       <HowToBuy />
       <Tokenomics />
