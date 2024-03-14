@@ -48,8 +48,8 @@ const About = () => {
               className="text-md text-violet-200 sm:text-lg"
               variants={staggerItem}
             >
-              Enter the world of ClumsyCat Token. Holders of this quirky
-              currency will discover that Fluffy&rsquo;s &quot;accidental&quot;
+              Enter the world of ClumsyCat Token. Holders of this quirky coin
+              will discover that Fluffy&rsquo;s &quot;accidental&quot;
               droppings—those bits of projects that slip off the desk—magically
               appear in their wallets. That&rsquo;s the charm of the ClumsyCat
               Token: as Fluffy embarks on new ventures, token holders are gifted

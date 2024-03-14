@@ -12,7 +12,9 @@ export default function Home() {
         <div className="spacer bg-aboutDivider" />
       </div>
       <About />
-      <div className="spacer bg-howToDivider" />
+      <div className="bg-gradient-to-b from-violet-900 to-violet-300">
+        <div className="spacer bg-howToDivider" />
+      </div>
       <HowToBuy />
       <Tokenomics />
       <Roadmap />
