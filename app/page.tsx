@@ -7,15 +7,21 @@ import Tokenomics from "@/components/Tokenomics"
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <div className="bg-violet-300">
+        <Hero />
+      </div>
       <div className="bg-gradient-to-b from-violet-300 to-violet-900">
         <div className="spacer bg-aboutDivider" />
       </div>
-      <About />
+      <div className="bg-violet-900">
+        <About />
+      </div>
       <div className="bg-gradient-to-b from-violet-900 to-violet-300">
         <div className="spacer bg-howToDivider" />
       </div>
-      <HowToBuy />
+      <div className="bg-violet-300">
+        <HowToBuy />
+      </div>
       <Tokenomics />
       <Roadmap />
       {/* temporary div */}
