@@ -7,7 +7,10 @@ import { staggerItem, staggerParentContainer } from "@/lib/motion"
 
 const About = () => {
   return (
-    <section id="about" className="min-h-[100vh] bg-violet-900 lg:h-[912px]">
+    <section
+      id="about"
+      className="mt-[-5px] min-h-[100vh] bg-violet-900 lg:h-[912px]"
+    >
       <motion.div
         className="container mx-auto h-full"
         variants={staggerParentContainer}
