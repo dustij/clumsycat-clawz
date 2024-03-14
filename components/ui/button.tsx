@@ -19,12 +19,12 @@ const buttonVariants = cva(
         violet_gradient:
           "bg-gradient-to-r from-violet-700 to-pink-500 text-white hover:from-violet-700/90 hover:to-pink-500/90",
         violet_outline:
-          "border border-violet-900 text-violet-900 hover:bg-violet-100/20",
+          "border border-violet-900 text-violet-900 hover:border-violet-900/90 hover:text-violet-900/90",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
+        lg: "h-11 rounded-md px-8 text-md",
         icon: "h-10 w-10",
         lg_rounded: "h-11 rounded-full px-8",
       },
