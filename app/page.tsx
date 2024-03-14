@@ -8,7 +8,9 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <div className="spacer bg-aboutDivider" />
+      <div className="bg-gradient-to-b from-violet-300 to-violet-900">
+        <div className="spacer bg-aboutDivider" />
+      </div>
       <About />
       <div className="spacer bg-howToDivider" />
       <HowToBuy />
