@@ -17,16 +17,16 @@ const About = () => {
       >
         <motion.div
           variants={staggerItem}
-          className="flex h-full flex-col items-center justify-center sm:flex-row"
+          className="flex h-full flex-col items-center justify-center md:flex-row"
         >
           <Image
             src="/img/about/token.png"
             width={700}
             height={700}
             alt="Token"
-            className="hidden sm:block"
+            className="hidden md:block"
           />
-          <div className="flex grow flex-col gap-8 pt-10 sm:ml-20 sm:pt-0">
+          <div className="flex grow flex-col gap-8 pt-10 sm:ml-20 md:pt-0">
             <motion.h2
               className="text-4xl text-violet-100 sm:text-5xl"
               variants={staggerItem}
@@ -70,7 +70,7 @@ const About = () => {
               Token.
             </motion.p>
           </div>
-          <div className="sm:hidden">
+          <div className="md:hidden">
             <Image
               src="/img/about/token.png"
               width={700}
