@@ -5,7 +5,7 @@ const Hero = () => {
     <div className="h-full w-full bg-gradient-to-b from-transparent via-violet-100 to-violet-300">
       <section
         id="home"
-        className="md:bg-hero md:bg-md lg:bg-lg mt-[70px] h-[calc(100vh-70px)] bg-none bg-center bg-no-repeat lg:h-[912px]"
+        className="md:bg-hero md:bg-md lg:bg-lg mt-[30px] min-h-[calc(100vh-70px)] bg-none bg-center bg-no-repeat sm:mt-[70px] lg:h-[912px]"
         // className="to-background_light via-background_light h-[80vh] bg-gradient-to-t from-violet-300 lg:h-[912px]"
       >
         <div className="container mx-auto h-full">
@@ -30,7 +30,7 @@ const Hero = () => {
               {/* Buttons */}
             </div>
             <Image
-              className="mb-7 md:hidden"
+              className="mt-8 md:hidden"
               src="/img/hero/fluffy-transparent.png"
               width={600}
               height={600}
