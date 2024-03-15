@@ -17,7 +17,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="mb-[-10px] mt-[-10px] flex min-h-[(100vh)] items-center bg-violet-900 py-[20px]"
+      className="mb-[-10px] mt-[-10px] flex min-h-[100vh] items-center bg-violet-900 py-[20px]"
     >
       <motion.div
         className="container m-auto h-full"
@@ -91,40 +91,45 @@ const About = () => {
               miss a beat in the whimsical world of Fluffy and the ClumsyCat
               Token.
             </motion.p>
-            <h2 className="text-[1.5rem] text-violet-100">
-              Join The Adventure
-            </h2>
-            <form
-              className="flex w-full max-w-sm items-center justify-center space-x-2"
-              action={async (formData) => {
-                subscribeEmail(formData)
-                  .then(() => {
-                    setSubscribeSuccess(true)
-                    return toast.success("Subscribed successfully")
-                  })
-                  .catch((error) => {
-                    setSubscribeSuccess(false)
-                    return toast.error("Subscription failed")
-                  })
-              }}
+            <motion.h2
+              className="text-[1.5rem] text-violet-100"
+              variants={staggerItem}
             >
-              <Input
-                name="email"
-                type="email"
-                placeholder="Email"
-                className="text-violet-50"
-                required
-                disabled={subsbribeSuccess}
-                maxLength={500}
-              />
-              <Button
-                disabled={subsbribeSuccess}
-                type="submit"
-                className="bg-violet-50 text-violet-950 hover:bg-violet-50/90 hover:text-violet-950/90"
+              Join The Adventure
+            </motion.h2>
+            <motion.div variants={staggerItem}>
+              <form
+                className="flex w-full max-w-sm items-center justify-center space-x-2"
+                action={async (formData) => {
+                  subscribeEmail(formData)
+                    .then(() => {
+                      setSubscribeSuccess(true)
+                      return toast.success("Subscribed successfully")
+                    })
+                    .catch((error) => {
+                      setSubscribeSuccess(false)
+                      return toast.error("Subscription failed")
+                    })
+                }}
               >
-                Subscribe
-              </Button>
-            </form>
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  className="text-violet-50"
+                  required
+                  disabled={subsbribeSuccess}
+                  maxLength={500}
+                />
+                <Button
+                  disabled={subsbribeSuccess}
+                  type="submit"
+                  className="bg-violet-50 text-violet-950 hover:bg-violet-50/90 hover:text-violet-950/90"
+                >
+                  Subscribe
+                </Button>
+              </form>
+            </motion.div>
           </div>
           <motion.div
             className="mb-4 mt-8 md:hidden"
