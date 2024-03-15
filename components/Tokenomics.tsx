@@ -10,10 +10,10 @@ const Tokenomics = () => {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "start end"],
+    offset: ["0 1", "1.33 0"],
   })
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"])
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["33%", "-33%"])
 
   return (
     <section className="relative mb-[-10px] mt-[-10px] min-h-[calc(100vh+70px)] items-center">
@@ -21,7 +21,7 @@ const Tokenomics = () => {
       <motion.div
         style={{ y: backgroundY }}
         ref={ref}
-        className="bg-fluffy absolute left-0 top-0 h-full w-full bg-contain bg-center bg-no-repeat"
+        className="bg-fluffy absolute left-0 top-0 h-full w-full bg-cover bg-center bg-no-repeat sm:bg-contain"
       />
       <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-b from-violet-950/90 via-violet-950/90 to-violet-950" />
       <motion.div
