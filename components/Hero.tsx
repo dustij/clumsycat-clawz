@@ -6,6 +6,7 @@ import Link from "next/link"
 import { FaTelegramPlane } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
 
+import { config } from "@/config"
 import { buttonItem, staggerItem, staggerParentContainer } from "@/lib/motion"
 
 import { Button } from "./ui/button"
@@ -66,7 +67,7 @@ const Hero = () => {
                   </motion.div>
                   <motion.div variants={buttonItem}>
                     <Link
-                      href="https://twitter.com/ClumsyCat_Sol"
+                      href={config.x}
                       rel="noopener noreferrer"
                       target="_blank"
                     >
@@ -82,7 +83,7 @@ const Hero = () => {
                   </motion.div>
                   <motion.div variants={buttonItem}>
                     <Link
-                      href="https://t.me/clumsycat_sol"
+                      href={config.telegram}
                       rel="noopener noreferrer"
                       target="_blank"
                     >

@@ -12,6 +12,7 @@ export default function Home() {
       <About />
       <div className="spacer bg-howToDivider" />
       <HowToBuy />
+      {/* <div className="spacer bg-howToDivider" /> */}
       <Tokenomics />
       <Roadmap />
       {/* temporary div */}

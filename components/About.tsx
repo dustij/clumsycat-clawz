@@ -17,10 +17,10 @@ const About = () => {
   return (
     <section
       id="about"
-      className="mb-[-5px] mt-[-5px] min-h-[100vh] bg-violet-900 lg:h-[912px]"
+      className="mb-[-10px] mt-[-10px] flex min-h-[(100vh)] items-center bg-violet-900 py-[20px]"
     >
       <motion.div
-        className="container mx-auto h-full"
+        className="container m-auto h-full"
         variants={staggerParentContainer}
         initial="hidden"
         whileInView="show"
