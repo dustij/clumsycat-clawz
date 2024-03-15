@@ -27,6 +27,7 @@ const config: Config = {
         aboutDivider: "url(/svg/dividers/about-divider.svg)",
         howToDivider: "url(/svg/dividers/how-to-divider.svg)",
         tokenomicsDivider: "url(/svg/dividers/tokenomics-divider.svg)",
+        roadmapDivider: "url(/svg/dividers/roadmap-divider.svg)",
         fluffy: "url(/img/tokenomics/fluffy.png)",
       },
       backgroundSize: {
