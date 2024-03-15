@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { easeInOut, motion } from "framer-motion"
 import Image from "next/image"
 
 import { staggerItem, staggerParentContainer } from "@/lib/motion"
@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="mt-[-5px] min-h-[100vh] bg-violet-900 lg:h-[912px]"
+      className="mb-[-5px] mt-[-5px] min-h-[100vh] bg-violet-900 lg:h-[912px]"
     >
       <motion.div
         className="container mx-auto h-full"
@@ -22,14 +22,25 @@ const About = () => {
           variants={staggerItem}
           className="flex h-full flex-col items-center justify-center md:flex-row"
         >
-          <Image
-            src="/img/about/token.png"
-            width={700}
-            height={700}
-            alt="Token"
-            className="hidden md:block"
-          />
-          <div className="flex grow flex-col gap-8 pt-10 sm:ml-20 md:pt-0">
+          <motion.div
+            initial={{ y: 20 }}
+            animate={{ y: [0, 20, 0] }}
+            transition={{
+              type: "srping",
+              duration: 1.5,
+              repeat: Infinity,
+              ease: easeInOut,
+            }}
+          >
+            <Image
+              src="/img/about/token.png"
+              width={600}
+              height={600}
+              alt="Token"
+              className="hidden md:block"
+            />
+          </motion.div>
+          <div className="flex flex-1 flex-col gap-8 pt-10 sm:ml-20 md:pt-0">
             <motion.h2
               className="text-4xl text-violet-100 sm:text-5xl"
               variants={staggerItem}
@@ -73,11 +84,11 @@ const About = () => {
               Token.
             </motion.p>
           </div>
-          <div className="md:hidden">
+          <div className="mb-4  mt-8 md:hidden">
             <Image
               src="/img/about/token.png"
-              width={700}
-              height={700}
+              width={300}
+              height={300}
               alt="Token"
             />
           </div>
