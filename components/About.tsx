@@ -3,9 +3,18 @@
 import { easeInOut, motion } from "framer-motion"
 import Image from "next/image"
 
+import { subscribeEmail } from "@/lib/actions"
 import { staggerItem, staggerParentContainer } from "@/lib/motion"
 
+import { Button } from "./ui/button"
+import { Input } from "./ui/input"
+
 const About = () => {
+  const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    console.log("Subscribed!")
+  }
+
   return (
     <section
       id="about"
@@ -83,8 +92,28 @@ const About = () => {
               miss a beat in the whimsical world of Fluffy and the ClumsyCat
               Token.
             </motion.p>
+            <form
+              className="mt-4 flex w-full max-w-sm items-center justify-center space-x-2"
+              action={async (formData) => {
+                subscribeEmail(formData)
+              }}
+            >
+              <Input
+                type="email"
+                placeholder="Email"
+                className="text-violet-50"
+                required
+                maxLength={500}
+              />
+              <Button
+                type="submit"
+                className="bg-violet-50 text-violet-950 hover:bg-violet-50/90 hover:text-violet-950/90"
+              >
+                Subscribe
+              </Button>
+            </form>
           </div>
-          <div className="mb-4  mt-8 md:hidden">
+          <div className="mb-4 mt-8 md:hidden">
             <Image
               src="/img/about/token.png"
               width={300}
