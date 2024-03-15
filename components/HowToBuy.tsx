@@ -15,7 +15,7 @@ const HowToBuy = () => {
   return (
     <section
       id="how-to-buy"
-      className="mb-[-10px] mt-[-10px] flex min-h-[100vh] items-center bg-violet-300 py-[20px]"
+      className="mb-[-10px] mt-[-10px] flex min-h-[100vh] items-center bg-violet-300 py-[20px] pb-12"
     >
       <motion.div
         className="container mx-auto h-full"
@@ -45,9 +45,7 @@ const HowToBuy = () => {
                 <p>1</p>
               </div>
               <div className="flex flex-1 flex-col gap-4">
-                <h3 className="text-xl text-violet-800">
-                  Download Phantom Extension
-                </h3>
+                <h3 className="text-xl text-violet-800">Download Phantom</h3>
                 <p className="text-lg text-violet-800">
                   Download and install Phantom from the app store for mobile
                   use, or install the browser extension for desktop browsers.
@@ -104,7 +102,7 @@ const HowToBuy = () => {
                   <p>2</p>
                 </div>
                 <div className="flex flex-1 flex-col gap-4">
-                  <h3 className="text-xl text-violet-800">Fund Your Wallet</h3>
+                  <h3 className="text-xl text-violet-800">Add Funds</h3>
                   <p className="text-lg text-violet-800">
                     To acquire $CLAWZ, ensure you have SOL in your Phantom
                     wallet. If you don&apos;t have SOL, you have various
@@ -159,7 +157,6 @@ const HowToBuy = () => {
                     <span className="px-4 py-2">
                       <svg
                         fill="currentColor"
-                        stroke-width="0"
                         viewBox="0 0 448 512"
                         focusable="false"
                         height="1em"
@@ -232,7 +229,7 @@ const HowToBuy = () => {
                   <p>4</p>
                 </div>
                 <div className="flex flex-1 flex-col gap-4">
-                  <h3 className="text-xl text-violet-800">Get Some $CLAWZ</h3>
+                  <h3 className="text-xl text-violet-800">Get $CLAWZ</h3>
                   <p className="text-lg text-violet-800">
                     Trade SOL for $CLAWZ hassle-free. Enjoy tax-free
                     transactions, eliminating concerns about specific slippage.

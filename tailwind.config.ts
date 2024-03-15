@@ -26,6 +26,8 @@ const config: Config = {
         hero: "url(/img/hero/fluffy-hero-wide.png)",
         aboutDivider: "url(/svg/dividers/about-divider.svg)",
         howToDivider: "url(/svg/dividers/how-to-divider.svg)",
+        tokenomicsDivider: "url(/svg/dividers/tokenomics-divider.svg)",
+        fluffy: "url(/img/tokenomics/fluffy.png)",
       },
       backgroundSize: {
         auto: "auto",
