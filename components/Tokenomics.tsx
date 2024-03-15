@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, useInView, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
 import { useRef } from "react"
 import CountUp from "react-countup"
@@ -10,6 +10,10 @@ import { staggerItem, staggerParentContainer } from "@/lib/motion"
 const Tokenomics = () => {
   const scrollRef = useRef(null)
   const numberRef = useRef(null)
+  const numberRefMobile = useRef(null)
+  const isInView = useInView(numberRef)
+  const isInViewMobile = useInView(numberRefMobile)
+
   const { scrollYProgress } = useScroll({
     target: scrollRef,
     offset: ["0 1", "1.5 0"],
@@ -18,8 +22,8 @@ const Tokenomics = () => {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["33%", "-33%"])
 
   return (
-    <section className="relative mb-[-10px] mt-[-10px] min-h-[calc(100vh+70px)] items-center">
-      <div className="spacer bg-tokenomicsDivider relative z-10" />
+    <section className="relative mb-[-10px] mt-[-10px] min-h-[calc(100vh+70px)] items-center ">
+      <div className="spacer bg-tokenomicsDivider relative z-10 border-t-[10px] border-t-violet-300" />
       <motion.div
         style={{ y: backgroundY }}
         ref={scrollRef}
@@ -38,7 +42,7 @@ const Tokenomics = () => {
           variants={staggerItem}
           className="z-20 -mt-10 flex h-full flex-col items-center justify-center sm:mt-0 md:flex-row"
         >
-          <div className="relative">
+          <div ref={numberRef} className="relative">
             <div className="absolute inset-0 m-auto md:h-[200px] md:w-[200px] lg:h-[350px] lg:w-[350px]">
               <Image
                 src="/img/tokenomics/fluffy-2.png"
@@ -50,16 +54,24 @@ const Tokenomics = () => {
               />
             </div>
             <div className=" absolute hidden h-20 w-20 items-center justify-center text-4xl text-violet-100 md:-right-10 md:bottom-0 md:flex lg:bottom-0 lg:right-0">
-              <CountUp start={0} end={85} duration={6} suffix="%" />
+              {isInView && (
+                <CountUp start={0} end={85} duration={6} suffix="%" />
+              )}
             </div>
             <div className="absolute hidden h-20 w-20 items-center justify-center text-4xl text-violet-50 md:-right-9 md:flex lg:right-0 lg:top-0">
-              <CountUp start={0} end={8} duration={6} suffix="%" />
+              {isInView && (
+                <CountUp start={0} end={8} duration={6} suffix="%" />
+              )}
             </div>
             <div className="absolute hidden h-20 w-20 items-center justify-center text-4xl text-violet-50 md:-top-14 md:right-14 md:flex lg:-top-[12%] lg:right-[20%]">
-              <CountUp start={0} end={5} duration={6} suffix="%" />
+              {isInView && (
+                <CountUp start={0} end={5} duration={6} suffix="%" />
+              )}
             </div>
             <div className="absolute hidden h-20 w-20 items-center justify-center text-4xl text-violet-50 md:-top-[68px] md:right-32 md:flex lg:-top-24 lg:right-[38%]">
-              <CountUp start={0} end={2} duration={6} suffix="%" />
+              {isInView && (
+                <CountUp start={0} end={2} duration={6} suffix="%" />
+              )}
             </div>
             <Image
               src="/svg/charts/donut-chart.svg"
@@ -130,7 +142,7 @@ const Tokenomics = () => {
               </li>
             </ul>
           </div>
-          <div className="relative mt-24 md:hidden">
+          <div ref={numberRefMobile} className="relative mt-24 md:hidden">
             <div className="absolute inset-0 m-auto h-[150px] w-[150px] md:hidden">
               <Image
                 src="/img/tokenomics/fluffy-2.png"
@@ -142,16 +154,24 @@ const Tokenomics = () => {
               />
             </div>
             <div className=" absolute -right-10 bottom-0 flex h-20 w-20 items-center justify-center text-2xl text-violet-100 md:hidden lg:bottom-0 lg:right-0">
-              <CountUp start={0} end={85} duration={6} suffix="%" />
+              {isInViewMobile && (
+                <CountUp start={0} end={85} duration={6} suffix="%" />
+              )}
             </div>
             <div className="absolute -right-9 flex h-20 w-20 items-center justify-center text-2xl text-violet-50 md:hidden lg:right-0 lg:top-0">
-              <CountUp start={0} end={8} duration={6} suffix="%" />
+              {isInViewMobile && (
+                <CountUp start={0} end={8} duration={6} suffix="%" />
+              )}
             </div>
             <div className="absolute -top-14 right-14 flex h-20 w-20 items-center justify-center text-2xl text-violet-50 md:hidden lg:-top-[12%] lg:right-[20%]">
-              <CountUp start={0} end={5} duration={6} suffix="%" />
+              {isInViewMobile && (
+                <CountUp start={0} end={5} duration={6} suffix="%" />
+              )}
             </div>
             <div className="absolute -top-[68px] right-32 flex h-20 w-20 items-center justify-center text-2xl text-violet-50 md:hidden lg:-top-24 lg:right-[38%]">
-              <CountUp start={0} end={2} duration={6} suffix="%" />
+              {isInViewMobile && (
+                <CountUp start={0} end={2} duration={6} suffix="%" />
+              )}
             </div>
             <Image
               src="/svg/charts/donut-chart.svg"
