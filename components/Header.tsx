@@ -4,14 +4,12 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import toast from "react-hot-toast"
 
 import { cn } from "@/lib/utils"
 
 import ConnectWallet from "./ConnectWallet"
 import MobileNav from "./MobileNav"
 import Nav from "./Nav"
-import { Button } from "./ui/button"
 
 const topVariants = {
   closed: {

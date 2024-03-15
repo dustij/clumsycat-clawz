@@ -2,6 +2,8 @@
 
 import { easeInOut, motion } from "framer-motion"
 import Image from "next/image"
+import { useState } from "react"
+import toast from "react-hot-toast"
 
 import { subscribeEmail } from "@/lib/actions"
 import { staggerItem, staggerParentContainer } from "@/lib/motion"
@@ -10,10 +12,7 @@ import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 
 const About = () => {
-  const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    console.log("Subscribed!")
-  }
+  const [subsbribeSuccess, setSubscribeSuccess] = useState(false)
 
   return (
     <section
@@ -92,20 +91,34 @@ const About = () => {
               miss a beat in the whimsical world of Fluffy and the ClumsyCat
               Token.
             </motion.p>
+            <h2 className="text-[1.5rem] text-violet-100">
+              Join The Adventure
+            </h2>
             <form
-              className="mt-4 flex w-full max-w-sm items-center justify-center space-x-2"
+              className="flex w-full max-w-sm items-center justify-center space-x-2"
               action={async (formData) => {
                 subscribeEmail(formData)
+                  .then(() => {
+                    setSubscribeSuccess(true)
+                    return toast.success("Subscribed successfully")
+                  })
+                  .catch((error) => {
+                    setSubscribeSuccess(false)
+                    return toast.error("Subscription failed")
+                  })
               }}
             >
               <Input
+                name="email"
                 type="email"
                 placeholder="Email"
                 className="text-violet-50"
                 required
+                disabled={subsbribeSuccess}
                 maxLength={500}
               />
               <Button
+                disabled={subsbribeSuccess}
                 type="submit"
                 className="bg-violet-50 text-violet-950 hover:bg-violet-50/90 hover:text-violet-950/90"
               >
@@ -113,14 +126,24 @@ const About = () => {
               </Button>
             </form>
           </div>
-          <div className="mb-4 mt-8 md:hidden">
+          <motion.div
+            className="mb-4 mt-8 md:hidden"
+            initial={{ y: 20 }}
+            animate={{ y: [0, 20, 0] }}
+            transition={{
+              type: "srping",
+              duration: 1.5,
+              repeat: Infinity,
+              ease: easeInOut,
+            }}
+          >
             <Image
               src="/img/about/token.png"
               width={300}
               height={300}
               alt="Token"
             />
-          </div>
+          </motion.div>
         </motion.div>
       </motion.div>
     </section>

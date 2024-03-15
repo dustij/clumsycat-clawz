@@ -9,7 +9,7 @@ const ConnectWallet = ({ className }: { className?: string }) => {
     <Button
       variant="violet_gradient"
       size="lg_rounded"
-      onClick={() => toast.error("This feature is coming soon")}
+      onClick={() => toast.error("This feature is coming soon")} // TODO: Connect wallet and place toast message accordingly
       className={cn("font-medium", className)}
     >
       Connect Wallet
