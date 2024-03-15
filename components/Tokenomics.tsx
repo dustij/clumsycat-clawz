@@ -12,7 +12,7 @@ const Tokenomics = () => {
   const numberRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: scrollRef,
-    offset: ["0 1", "1.33 0"],
+    offset: ["0 1", "1.5 0"],
   })
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["33%", "-33%"])
@@ -36,26 +36,29 @@ const Tokenomics = () => {
       >
         <motion.div
           variants={staggerItem}
-          className="z-20 flex h-full flex-col items-center justify-center md:flex-row"
+          className="z-20 -mt-10 flex h-full flex-col items-center justify-center sm:mt-0 md:flex-row"
         >
           <div className="relative">
-            <Image
-              src="/img/tokenomics/fluffy-2.png"
-              width={350}
-              height={350}
-              alt="Fluffy"
-              className="absolute inset-0 m-auto"
-            />
-            <div className="absolute bottom-0 right-0 flex h-20 w-20 items-center justify-center text-4xl text-violet-100">
+            <div className="absolute inset-0 m-auto md:h-[200px] md:w-[200px] lg:h-[350px] lg:w-[350px]">
+              <Image
+                src="/img/tokenomics/fluffy-2.png"
+                // width={350}
+                // height={350}
+                fill={true}
+                alt="Fluffy"
+                className="absolute inset-0 m-auto"
+              />
+            </div>
+            <div className=" absolute hidden h-20 w-20 items-center justify-center text-4xl text-violet-100 md:-right-10 md:bottom-0 md:flex lg:bottom-0 lg:right-0">
               <CountUp start={0} end={85} duration={6} suffix="%" />
             </div>
-            <div className="absolute right-0 top-0 flex h-20 w-20 items-center justify-center text-4xl text-violet-50">
+            <div className="absolute hidden h-20 w-20 items-center justify-center text-4xl text-violet-50 md:-right-9 md:flex lg:right-0 lg:top-0">
               <CountUp start={0} end={8} duration={6} suffix="%" />
             </div>
-            <div className="absolute -top-[13%] right-[20%] flex h-20 w-20 items-center justify-center text-4xl text-violet-50">
+            <div className="absolute hidden h-20 w-20 items-center justify-center text-4xl text-violet-50 md:-top-14 md:right-14 md:flex lg:-top-[12%] lg:right-[20%]">
               <CountUp start={0} end={5} duration={6} suffix="%" />
             </div>
-            <div className="absolute -top-24 right-[40%] flex h-20 w-20 items-center justify-center text-4xl text-violet-50">
+            <div className="absolute hidden h-20 w-20 items-center justify-center text-4xl text-violet-50 md:-top-[68px] md:right-32 md:flex lg:-top-24 lg:right-[38%]">
               <CountUp start={0} end={2} duration={6} suffix="%" />
             </div>
             <Image
@@ -66,7 +69,7 @@ const Tokenomics = () => {
               className="z-20 hidden md:block"
             />
           </div>
-          <div className="z-20 flex flex-1 flex-col gap-8 pt-10 sm:ml-20 md:pt-0">
+          <div className="z-20 flex flex-1 flex-col gap-8 sm:ml-20 sm:pt-10 md:pt-0">
             <motion.h2
               className="z-20 text-4xl text-violet-50 sm:text-5xl"
               variants={staggerItem}
@@ -127,13 +130,37 @@ const Tokenomics = () => {
               </li>
             </ul>
           </div>
-          <Image
-            src="/svg/charts/donut-chart.svg"
-            width={300}
-            height={300}
-            alt="Donut Chart"
-            className="z-20 mt-16 md:hidden"
-          />
+          <div className="relative mt-24 md:hidden">
+            <div className="absolute inset-0 m-auto h-[150px] w-[150px] md:hidden">
+              <Image
+                src="/img/tokenomics/fluffy-2.png"
+                // width={350}
+                // height={350}
+                fill={true}
+                alt="Fluffy"
+                className="absolute inset-0 m-auto"
+              />
+            </div>
+            <div className=" absolute -right-10 bottom-0 flex h-20 w-20 items-center justify-center text-2xl text-violet-100 md:hidden lg:bottom-0 lg:right-0">
+              <CountUp start={0} end={85} duration={6} suffix="%" />
+            </div>
+            <div className="absolute -right-9 flex h-20 w-20 items-center justify-center text-2xl text-violet-50 md:hidden lg:right-0 lg:top-0">
+              <CountUp start={0} end={8} duration={6} suffix="%" />
+            </div>
+            <div className="absolute -top-14 right-14 flex h-20 w-20 items-center justify-center text-2xl text-violet-50 md:hidden lg:-top-[12%] lg:right-[20%]">
+              <CountUp start={0} end={5} duration={6} suffix="%" />
+            </div>
+            <div className="absolute -top-[68px] right-32 flex h-20 w-20 items-center justify-center text-2xl text-violet-50 md:hidden lg:-top-24 lg:right-[38%]">
+              <CountUp start={0} end={2} duration={6} suffix="%" />
+            </div>
+            <Image
+              src="/svg/charts/donut-chart.svg"
+              width={300}
+              height={300}
+              alt="Donut Chart"
+              className="z-20 md:hidden"
+            />
+          </div>
         </motion.div>
       </motion.div>
     </section>
