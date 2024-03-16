@@ -72,51 +72,56 @@ const Roadmap = () => {
       {/* <div className="spacer bg-roadmapDivider relative z-30 " /> */}
       <motion.div
         id="roadmap"
-        className="container z-20 flex min-h-[calc(100vh)] flex-col gap-8 py-[20px]"
+        className="container z-20 flex min-h-[calc(100vh)] flex-col py-[20px]"
         variants={staggerParentContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
       >
         <motion.h1
-          className="text-center text-4xl text-violet-900 sm:text-5xl"
+          className="mb-8 text-center text-4xl text-violet-900 sm:text-5xl"
           variants={staggerItem}
         >
           Roadmap
         </motion.h1>
         {roadmapCards.map((card, i) => (
-          <Card key={i} className="bg-white">
-            <CardContent>
-              <div className="flex w-full flex-col justify-between md:flex-row">
-                <div>
-                  <CardHeader>
-                    <CardTitle className="text-2xl">{card.title}</CardTitle>
-                    <CardDescription className="text-lg">
-                      {card.subtitle}
+          <div
+            key={i}
+            className="flex min-h-[100vh] items-center justify-center border-2 md:h-[100vh]"
+          >
+            <Card className="min-h-[100vh] border-violet-300 bg-white text-violet-900 md:h-[500px] md:min-h-[500px] md:w-[1000px]">
+              <CardContent className="h-full">
+                <div className="flex h-full w-full flex-col justify-between md:flex-row">
+                  <div>
+                    <CardHeader>
+                      <CardTitle className="text-2xl">{card.title}</CardTitle>
+                      <CardDescription className="text-lg">
+                        {card.subtitle}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardDescription className="px-6 text-base">
+                      {card.objective}
                     </CardDescription>
-                  </CardHeader>
-                  <CardDescription className="px-6 text-base">
-                    {card.objective}
-                  </CardDescription>
-                  <div className="px-6 pt-6">
-                    <ul className="list-disc pl-6">
-                      {card.bullets.map((bullet, i) => (
-                        <li key={i}>{bullet}</li>
-                      ))}
-                    </ul>
+                    <div className="px-6 pt-6">
+                      <ul className="list-disc pl-6">
+                        {card.bullets.map((bullet, i) => (
+                          <li key={i}>{bullet}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="m-auto md:mx-0 md:min-w-[494px]">
+                    <Image
+                      src={card.src}
+                      alt={card.title}
+                      width={500}
+                      height={500}
+                    />
                   </div>
                 </div>
-                <div className="mx-auto pt-6 sm:mx-0">
-                  <Image
-                    src={card.src}
-                    alt={card.title}
-                    width={500}
-                    height={500}
-                  />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
         ))}
       </motion.div>
     </section>
