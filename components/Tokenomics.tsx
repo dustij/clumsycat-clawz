@@ -22,8 +22,8 @@ const Tokenomics = () => {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["33%", "-33%"])
 
   return (
-    <section className="relative mb-[-10px] mt-[-10px] min-h-[calc(100vh+70px)] items-center">
-      <div className="spacer bg-tokenomicsDivider relative z-10 border-t-[10px] border-t-violet-300" />
+    <section className="relative mb-[-10px] mt-[-10px] min-h-[calc(100vh+70px)] items-center md:py-36 lg:py-0">
+      <div className="spacer bg-tokenomicsDivider relative z-10 " />
       <motion.div
         style={{ y: backgroundY }}
         ref={scrollRef}
