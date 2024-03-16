@@ -68,26 +68,27 @@ export const roadmapCards = [
 
 const Roadmap = () => {
   return (
-    <section className="relative z-10 h-full bg-gradient-to-b from-background_light to-violet-100">
+    <section className="bg--background_light relative z-10 h-full">
       {/* <div className="spacer bg-roadmapDivider relative z-30 " /> */}
       <motion.div
         id="roadmap"
-        className="container z-20 flex min-h-[calc(100vh)] flex-col py-[20px]"
+        className="container z-20 flex min-h-[100vh] flex-col"
         variants={staggerParentContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
       >
         <motion.h1
-          className="mb-8 text-center text-4xl text-violet-900 sm:text-5xl"
+          className="sticky top-[70px] -mb-[88px] h-auto py-[20px] text-center text-4xl text-violet-900 sm:text-5xl"
           variants={staggerItem}
         >
           Roadmap
         </motion.h1>
         {roadmapCards.map((card, i) => (
           <div
+            // card container
             key={i}
-            className="flex min-h-[100vh] items-center justify-center border-2 md:h-[100vh]"
+            className="sticky top-[70px] z-20 flex min-h-[100vh] items-center justify-center md:h-[100vh]"
           >
             <Card className="min-h-[100vh] border-violet-300 bg-white text-violet-900 md:h-[500px] md:min-h-[500px] md:w-[1000px]">
               <CardContent className="h-full">
@@ -124,6 +125,7 @@ const Roadmap = () => {
           </div>
         ))}
       </motion.div>
+      <div className="absolute bottom-0 left-0 z-10 h-[500px] w-full bg-background_light" />
     </section>
   )
 }
