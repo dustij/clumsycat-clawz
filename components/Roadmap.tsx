@@ -134,16 +134,16 @@ const Roadmap = () => {
           <div
             // card container
             key={i}
-            className="sticky top-[calc(3rem+40px)] z-20 flex items-center justify-center sm:-mt-[calc(3rem+40px)] md:h-screen"
+            className="sticky top-[140px] z-20 mt-[80px] flex items-center justify-center sm:top-[calc(3rem+40px)] sm:-mt-[calc(3rem+40px)] md:h-screen"
           >
             <motion.div
               // card
               className={cn(
-                "relative min-h-[100vh] md:h-[500px] md:min-h-[500px] md:w-[1000px]",
-                i == 0 && "-top-[50px]",
-                i == 1 && "-top-[20px]",
-                i == 2 && "top-[10px]",
-                i == 3 && "top-[40px]",
+                "relative min-h-[100vh] origin-top md:h-[500px] md:min-h-[500px] md:w-[1000px]",
+                i == 0 && "-top-[50px] md:-top-[50px]",
+                i == 1 && "-top-[40px] md:-top-[20px]",
+                i == 2 && "-top-[30px] md:top-[10px]",
+                i == 3 && "-top-[20px] md:top-[40px]",
               )}
               style={{
                 scale:
