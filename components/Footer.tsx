@@ -45,12 +45,12 @@ const Footer = () => {
               </Button>
             </Link>
             <Link
-              href={config.dexscreener}
+              href={config.solscan}
               rel="noopener noreferrer"
               target="_blank"
             >
               <Button size="icon" className="shadow-none">
-                <Icons name="dexscreener" />
+                <Icons name="solscan" />
               </Button>
             </Link>
           </div>

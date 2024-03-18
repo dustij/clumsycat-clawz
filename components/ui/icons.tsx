@@ -1,12 +1,12 @@
 import { FC } from "react"
 
 type IconsProps = {
-  name: "dexscreener" | "twitter" | "telegram"
+  name: "solscan" | "twitter" | "telegram"
 }
 
 const Icons: FC<IconsProps> = ({ name }) => {
   switch (name) {
-    case "dexscreener":
+    case "solscan":
       return (
         <svg
           width="1.25em"
