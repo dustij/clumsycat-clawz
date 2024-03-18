@@ -15,8 +15,6 @@ export default function Home() {
       <Tokenomics />
       <div className="spacer bg-roadmapDivider relative z-30 border-t-[2px] border-t-violet-950" />
       <Roadmap />
-      {/* temporary div */}
-      {/* <div className="h-[3000px]"></div> */}
     </main>
   )
 }
