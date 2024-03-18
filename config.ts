@@ -3,6 +3,6 @@ export const config = {
   x: "https://twitter.com/ClumsyCat_Sol",
   telegram: "https://t.me/clumsycat_sol",
   solscan:
-    "https://solscan.io/account/HwPkfjKLgtHd1pxGZW4bG35T9utARe9oNeanPF1pCNx1",
+    "https://solscan.io/token/HsNsfNfngXfiWkrXReGRbbizMBg2NrMqX1KJyGddNkaJ",
   raydium: "https://raydium.io/liquidity/?ammId=",
 }
