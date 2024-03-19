@@ -38,7 +38,7 @@ const HowToBuy = () => {
           >
             {/* STEP 1 */}
             <motion.div
-              className="flex max-w-[767px] items-center gap-4 rounded-xl bg-violet-100 p-6 shadow-lg"
+              className="flex items-center gap-4 rounded-xl bg-violet-100 p-6 shadow-lg sm:max-w-[767px]"
               variants={staggerItem}
             >
               <div className="mb-auto flex h-10 w-10 items-center justify-center rounded-full bg-violet-200 p-1 text-xl text-violet-500">
@@ -117,13 +117,13 @@ const HowToBuy = () => {
             {/* STEP 3 */}
             <div className="flex w-full">
               <motion.div
-                className="flex max-w-[767px] items-center gap-4 rounded-xl bg-violet-100 p-6 shadow-lg"
+                className="flex w-full max-w-full  items-center gap-4 rounded-xl bg-violet-100 p-6 shadow-lg sm:max-w-[767px]"
                 variants={staggerItem}
               >
-                <div className="mb-auto flex h-10 w-10 items-center justify-center rounded-full bg-violet-200 p-1 text-xl text-violet-500">
+                <div className="mb-auto flex h-10 w-10 min-w-10 items-center justify-center rounded-full bg-violet-200 p-1 text-xl text-violet-500">
                   <p>3</p>
                 </div>
-                <div className="flex flex-1 flex-col gap-4">
+                <div className="flex w-full max-w-full flex-1 flex-col gap-4 overflow-x-auto">
                   <h3 className="text-xl text-violet-800">Visit Raydium</h3>
                   <p className="text-lg text-violet-800">
                     Access Raydium through your preferred browser by visiting{" "}
@@ -142,7 +142,7 @@ const HowToBuy = () => {
                     &quot;ClumsyCat&quot; as your option.
                   </p>
                   <div
-                    className="flex items-center justify-between rounded-lg border border-violet-700 text-violet-700 hover:cursor-pointer hover:text-violet-700/80"
+                    className="flex w-full max-w-full items-center justify-between overflow-hidden text-ellipsis rounded-lg border border-violet-700 text-violet-700 hover:cursor-pointer hover:text-violet-700/80"
                     onClick={() =>
                       copyToClipboard(config.ca)
                         .then(() => {
@@ -153,7 +153,9 @@ const HowToBuy = () => {
                         })
                     }
                   >
-                    <span className="px-4 py-2 ">{config.ca}</span>
+                    <span className="w-full max-w-full overflow-hidden text-ellipsis px-4 py-2">
+                      {config.ca}
+                    </span>
                     <span className="px-4 py-2">
                       <svg
                         fill="currentColor"
