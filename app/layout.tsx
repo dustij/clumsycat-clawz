@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import { Paytone_One, Roboto } from "next/font/google"
 import { Toaster } from "react-hot-toast"
 
+import Countdown from "@/components/Countdown"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import { cn } from "@/lib/utils"
@@ -40,6 +41,7 @@ export default function RootLayout({
           "mx-auto w-full max-w-[1920px] bg-background_light",
         )}
       >
+        <Countdown />
         <Header />
         {children}
         <Footer />

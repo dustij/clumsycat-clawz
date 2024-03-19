@@ -7,8 +7,9 @@ import { Button } from "./ui/button"
 import Icons from "./ui/icons"
 
 const Footer = () => {
+  // TODO: remove pb-80
   return (
-    <footer className="h-full w-full bg-violet-950 text-violet-100">
+    <footer className="h-full w-full bg-violet-950 pb-80 text-violet-100">
       <div className="container flex h-full flex-col justify-between gap-8 py-10">
         <div className="flex flex-col items-center justify-center gap-8">
           <Image src="/img/logo/logo.png" width={80} height={80} alt="logo" />
