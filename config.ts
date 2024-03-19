@@ -4,5 +4,5 @@ export const config = {
   telegram: "https://t.me/clumsycat_sol",
   solscan:
     "https://solscan.io/token/HsNsfNfngXfiWkrXReGRbbizMBg2NrMqX1KJyGddNkaJ",
-  raydium: "https://raydium.io/liquidity/?ammId=",
+  raydium: "#",
 }
