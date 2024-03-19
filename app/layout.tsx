@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import { cn } from "@/lib/utils"
+import { Analytics } from "@vercel/analytics/react"
 
 const paytone_one = Paytone_One({
   subsets: ["latin"],
@@ -43,6 +44,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <Toaster position="bottom-right" />
+        <Analytics />
       </body>
     </html>
   )
