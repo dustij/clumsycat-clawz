@@ -5,4 +5,5 @@ export const config = {
   solscan:
     "https://solscan.io/token/HsNsfNfngXfiWkrXReGRbbizMBg2NrMqX1KJyGddNkaJ",
   raydium: "coming-soon",
+  dexscreener: "coming-soon",
 }

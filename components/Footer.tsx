@@ -6,6 +6,18 @@ import { config } from "@/config"
 import { Button } from "./ui/button"
 import Icons from "./ui/icons"
 
+type IconData = {
+  href: string
+  name: "solscan" | "twitter" | "telegram" | "dexscreener"
+}
+
+const iconsArray: IconData[] = [
+  { href: config.x, name: "twitter" },
+  { href: config.telegram, name: "telegram" },
+  { href: config.solscan, name: "solscan" },
+  { href: config.dexscreener, name: "dexscreener" },
+]
+
 const Footer = () => {
   // TODO: remove pb-80
   return (
@@ -30,30 +42,22 @@ const Footer = () => {
           <div>
             <p>ClumsyCat &copy; 2024 All Rights Reserved.</p>
           </div>
-          <div className="flex items-center">
-            <Link href={config.x} rel="noopener noreferrer" target="_blank">
-              <Button size="icon" className="shadow-none">
-                <Icons name="twitter" />
-              </Button>
-            </Link>
-            <Link
-              href={config.telegram}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <Button size="icon" className="shadow-none">
-                <Icons name="telegram" />
-              </Button>
-            </Link>
-            <Link
-              href={config.solscan}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <Button size="icon" className="shadow-none">
-                <Icons name="solscan" />
-              </Button>
-            </Link>
+          <div className="flex items-center gap-4">
+            {iconsArray.map((icon, index) => (
+              <Link
+                key={icon.name}
+                href={icon.href}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <Button
+                  size="icon"
+                  className="flex h-5 w-5 items-center justify-center shadow-none"
+                >
+                  <Icons name={icon.name} />
+                </Button>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
