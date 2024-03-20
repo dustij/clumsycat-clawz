@@ -9,7 +9,7 @@ export default function Countdown() {
   const [seconds, setSeconds] = useState(0)
 
   useEffect(() => {
-    const target = new Date("03/21/2024 10:00:00")
+    const target = new Date(Date.UTC(2024, 2, 21, 10, 0, 0, 0))
 
     const interval = setInterval(() => {
       const now = new Date()
