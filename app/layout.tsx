@@ -41,7 +41,6 @@ export default function RootLayout({
           "mx-auto w-full max-w-[1920px] bg-background_light",
         )}
       >
-        <Countdown />
         <Header />
         {children}
         <Footer />
