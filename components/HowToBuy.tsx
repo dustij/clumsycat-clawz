@@ -138,8 +138,7 @@ const HowToBuy = () => {
                     </span>
                     , or use the built-in browser within your Phantom wallet
                     app. Connect your Phantom wallet, then enter the $CLAWZ
-                    token address in Raydium&apos;s search bar, selecting
-                    &quot;ClumsyCat&quot; as your option.
+                    token address in Raydium&apos;s search bar.
                   </p>
                   <div
                     className="flex w-full max-w-full items-center justify-between overflow-hidden text-ellipsis rounded-lg border border-violet-700 text-violet-700 hover:cursor-pointer hover:text-violet-700/80"
