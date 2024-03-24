@@ -60,7 +60,7 @@ export const roadmapCards = [
       "Develop and launch platforms to provide utility to the meme coin, thereby driving long-term growth and sustainability.",
     bullets: [
       "Launch of ClumsyNFTz Marketplace",
-      "Introduction of Clawzwap Exchange",
+      "Introduction of ClawZwap Exchange",
       "Plushy Giveaway and Airdrop Campaigns",
       "Listing on Centralized Exchanges (CEX)",
     ],
