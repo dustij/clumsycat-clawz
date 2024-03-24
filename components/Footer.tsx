@@ -8,7 +8,7 @@ import Icons from "./ui/icons"
 
 type IconData = {
   href: string
-  name: "solscan" | "twitter" | "telegram" | "dexscreener"
+  name: "solscan" | "twitter" | "telegram" | "dexscreener" | "dextools"
 }
 
 const iconsArray: IconData[] = [
@@ -16,6 +16,7 @@ const iconsArray: IconData[] = [
   { href: config.telegram, name: "telegram" },
   { href: config.solscan, name: "solscan" },
   { href: config.dexscreener, name: "dexscreener" },
+  { href: config.dextools, name: "dextools" },
 ]
 
 const Footer = () => {
@@ -41,6 +42,16 @@ const Footer = () => {
           <div>
             <p>ClumsyCat &copy; 2024 All Rights Reserved.</p>
           </div>
+
+          {/* Email but probably not needed
+          
+          <div className="mb-4 sm:mb-0"> 
+            <a href="mailto:clumsycat.sol@gmail.com" className="underline">
+              Contact Us
+            </a>
+          </div> 
+          
+          */}
           <div className="flex items-center gap-4">
             {iconsArray.map((icon, index) => (
               <Link

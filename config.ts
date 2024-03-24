@@ -8,4 +8,6 @@ export const config = {
     "https://raydium.io/swap/?inputCurrency=sol&outputCurrency=HsNsfNfngXfiWkrXReGRbbizMBg2NrMqX1KJyGddNkaJ&fixed=in",
   dexscreener:
     "https://dexscreener.com/solana/bm8uubswgevbtuf8ds33om9ychnx5kjckfr9huk6fbza",
+  dextools:
+    "https://www.dextools.io/app/en/solana/pair-explorer/BM8uubswgEvbtUF8DS33om9ychnx5kjckfR9HuK6FBZA",
 }
