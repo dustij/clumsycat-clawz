@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
+    "@solana/web3.js": "^1.91.1",
     "@studio-freight/lenis": "^1.0.40",
     "@types/react-scroll": "^1.8.10",
     "@vercel/analytics": "^1.2.2",
